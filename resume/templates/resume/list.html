@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Download Resume</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Your Resumes</h1>
+      <div class="list-group">
+        {% for user in users %}
+          <div class="list-group-item">
+            <h4>{{ user.name }}</h4>
+            <p>Email: {{ user.email }}</p>
+            <p>Phone: {{ user.phone }}</p>
+            <!-- Add more user details as needed -->
+            <a href="{% url 'download' user.id %}" class="btn btn-warning">Download Resume</a>
+          </div>
+        {% endfor %}
+      </div>
+      <a href="{% url 'home' %}" class="btn btn-success mt-3">Add New User Detail</a>
+    </div>
+  </body>
+</html>

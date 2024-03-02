@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Resume</title>
+    <style>
+      /* Add your CSS styles here to design the resume */
+      /* Example styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 10px;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      /* Add more styles as needed */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>{{ user_data.name }}</h1>
+      <p>Email: {{ user_data.email }}</p>
+      <p>Phone: {{ user_data.phone }}</p>
+      <p>Address: {{ user_data.adress }}</p>
+      <h2>Education</h2>
+      <p>Degree: {{ user_data.Degree }}</p>
+      <p>University: {{ user_data.university }}</p>
+      <p>Completion Year: {{ user_data.duration }}</p>
+      <h2>About Me</h2>
+      <p>{{ user_data.summary }}</p>
+      <h2>Skills</h2>
+      <p>{{ user_data.skills }}</p>
+      <h2>Projects</h2>
+      <p>{{ user_data.projects }}</p>
+      <h2>Work Experience</h2>
+      <p>{{ user_data.work }}</p>
+      <h2>Achievements</h2>
+      <p>{{ user_data.achivement }}</p>
+      <h2>Other Links</h2>
+      <p>{{ user_data.links }}</p>
+    </div>
+  </body>
+</html>
